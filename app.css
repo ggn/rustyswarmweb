@@ -1,58 +1,97 @@
 body {
-    background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAsJCQkJCAkJDBEMDAwMDAwRDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDP/wgALCAAcABwBAREA/8QAFQABAQAAAAAAAAAAAAAAAAAAAAH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAECMAAAAuA//9k='); /* Replace with actual rusty metal image base64 or URL */
+    background-image: url('bg.jpeg'); /* Replace with your futuristic background image */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: #d1d5db; /* Light gray text for readability on dark background */
+    color: #b8c2cc; /* Light gray text for readability on dark backgrounds */
+    font-family: 'Roboto Mono', monospace; /* Futuristic font */
 }
 
 .hero-bg {
-  background: rgba(0, 0, 0, 0.7); /* Dark overlay for hero */
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)); /* Dark gradient overlay */
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg::before { /* Add a subtle glowing effect to the hero */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(52, 152, 219, 0.1), transparent);
+    pointer-events: none;
 }
 
 .section-bg {
-    background: rgba(20, 20, 20, 0.8); /* Darker section backgrounds */
+    background: rgba(30, 30, 40, 0.85); /* Slightly darker section background */
     padding: 4rem 2rem;
-    border-radius: 8px;
+    border-radius: 12px;
     margin-bottom: 2rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Deeper shadow */
+    transition: transform 0.3s ease-in-out;
+}
+
+.section-bg:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
 }
 
 .btn-ai {
-    background: linear-gradient(135deg, #4a5568, #2d3748); /* Dark gradient button */
-    color: #e2e8f0;
-    padding: 1rem 2rem;
-    border-radius: 6px;
+    background: linear-gradient(135deg, #4a90e2, #2979ff); /* Bright blue gradient button */
+    color: #e0f2fe;
+    padding: 1.2rem 2.5rem;
+    border-radius: 8px;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
 }
 
 .btn-ai:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
 }
 
 .feature-box {
-    border: 1px solid #4a5568;
-    padding: 2rem;
-    border-radius: 6px;
-    transition: border-color 0.3s ease;
+    border: 1px solid #64b5f6; /* Light blue border */
+    padding: 2.5rem;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .feature-box:hover {
-    border-color: #718096;
+    border-color: #81d4fa; /* Lighter blue border on hover */
+    transform: translateY(-3px);
 }
 
 .icon-ai {
-    color: #9ca3af; /* Muted icon color */
+    color: #81d4fa; /* Bright blue icon color */
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)); /* Icon shadow */
 }
 
 h2, h3 {
-    color: #e5e7eb; /* Slightly lighter headings */
+    color: #e3f2fd; /* Light blue headings */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Heading shadow */
 }
 
 a {
-    color: #93c5fd; /* Light blue links */
+    color: #90caf9; /* Light blue links */
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
-a:hover{
-    color: #60a5fa;
+
+a:hover {
+    color: #64b5f6;
+    text-decoration: underline;
 }
+
+footer {
+    background: rgba(20, 20, 30, 0.9);
+    border-top: 1px solid #424242;
+    padding-top: 2rem;
+}
+/* Add any font import here. Example: */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap');
