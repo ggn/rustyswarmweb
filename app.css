@@ -5,6 +5,7 @@ body {
     background-attachment: fixed;
     color: #b8c2cc; /* Light gray text for readability on dark backgrounds */
     font-family: 'Roboto Mono', monospace; /* Futuristic font */
+    background-position-x: center;
 }
 
 .hero-bg {
