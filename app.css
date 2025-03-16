@@ -39,7 +39,7 @@ body {
 }
 
 .btn-ai {
-    background: linear-gradient(135deg, #4a90e2, #2979ff); /* Bright blue gradient button */
+    background: linear-gradient(135deg, #000000, #2f5493);
     color: #e0f2fe;
     padding: 1.2rem 2.5rem;
     border-radius: 8px;
